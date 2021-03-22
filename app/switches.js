@@ -8,6 +8,44 @@
 
 function daysPosition(day, offset) {
 
+    switch(day){
+        case "sunday": 
+        if(offset == true){
+            return 7
+        }else {return 1}
+        break;
+        case "monday": 
+        if(offset == true){
+            return 1
+        }else {return 2}
+        break;
+        case "tuesday":
+            if(offset == true){
+            return 2
+        }else {return 3}
+        break;
+        case "wednesday":
+            if(offset == true){
+            return 3
+        }else {return 4}
+        break;
+        case "thursday":
+            if(offset == true){
+            return 4
+        }else {return 5}
+        break;
+        case "friday":
+            if(offset == true){
+            return 5
+        }else {return 6}
+        break;
+        case "saturday":
+            if(offset == true){
+            return 6
+        }else {return 7}
+        break;
+        default: return "That's not a day of the week"
+    }
 }
 
 
@@ -27,7 +65,26 @@ function daysPosition(day, offset) {
  */
 
  function golfScore(score, par) {
+     let difference = score - par
+    switch(difference){
+        case -3: return "Ace"
+        break;
+        case -2: return "Eagle"
+        break;
+        case -1: return "Birdie"
+        break;
+        case 0: return "Par"
+        break;
+        case 1: return "Bogey"
+        break;
+        case 2: return "Double Bogey"
+        break;
+        case 3: return "Ouch"
+        break;
+        default: return "Ouch"
 
+
+    }
  }
  
 
@@ -50,7 +107,70 @@ function daysPosition(day, offset) {
     // output: '2 Bet'
 
 let count = 0
+let bet =" Bet"
+let hold =" Hold"
 
 function cardCounter(card) {
+    switch(card){
+        case "2": count++
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        case "3": count++
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        case "4": count++
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        case "5": count++
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        case "6": count++
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        default: if(count>0){
+            return count + bet
+        }else {return count + hold}
+
+        
+        case "10": count--
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+        case "J": count--
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+
+        case "Q": count--
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+
+        case "K": count--
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+
+        case "A": count--
+        if(count>0){
+            return count + bet
+        }else {return count + hold}
+        break;
+    }
+
 
 }
